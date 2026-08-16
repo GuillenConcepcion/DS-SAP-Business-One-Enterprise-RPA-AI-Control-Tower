@@ -1,0 +1,137 @@
+{
+  "summary": {
+    "analysis_date": "2026-08-16 11:15:12",
+    "total_orders_in_pipeline": 5,
+    "total_pipeline_value_usd": 545100.5,
+    "bottlenecks_detected": 3,
+    "bottlenecks_value_usd": 262700.5,
+    "average_aging_days": 2.6,
+    "stages_breakdown": {
+      "Preparación en Almacén": 2,
+      "Aprobación Pendiente": 1,
+      "Despachado / Entrega": 1,
+      "Facturado": 1
+    },
+    "bottleneck_alerts": [
+      {
+        "doc_num": 3001,
+        "client": "Empresas Dominicanas S.A.",
+        "doc_total_usd": 45000.0,
+        "stage": "Aprobación Pendiente",
+        "aging_days": 6,
+        "reason": "Aprobación de Crédito Pendiente (>48h)",
+        "warehouse": "01 - Principal"
+      },
+      {
+        "doc_num": 3002,
+        "client": "Distribuidora Caribe SRL",
+        "doc_total_usd": 128500.5,
+        "stage": "Preparación en Almacén",
+        "aging_days": 4,
+        "reason": "Retraso en Picking / Preparación de Pedido",
+        "warehouse": "02 - Secundario"
+      },
+      {
+        "doc_num": 3003,
+        "client": "Tecnología Global Dominicana",
+        "doc_total_usd": 89200.0,
+        "stage": "Preparación en Almacén",
+        "aging_days": 2,
+        "reason": "Falta Stock de Artículo A00004 en Almacén",
+        "warehouse": "01 - Principal"
+      }
+    ]
+  },
+  "raw_orders": [
+    {
+      "DocNum": 3001,
+      "CardCode": "C20000",
+      "CardName": "Empresas Dominicanas S.A.",
+      "DocTotal": 45000.0,
+      "DocDate": "2026-08-10",
+      "Stage": "Aprobación Pendiente",
+      "AgingDays": 6,
+      "IsBottleneck": true,
+      "BottleneckReason": "Aprobación de Crédito Pendiente (>48h)",
+      "Items": [
+        {
+          "ItemCode": "A00001",
+          "Qty": 2
+        }
+      ],
+      "Warehouse": "01 - Principal"
+    },
+    {
+      "DocNum": 3002,
+      "CardCode": "C30000",
+      "CardName": "Distribuidora Caribe SRL",
+      "DocTotal": 128500.5,
+      "DocDate": "2026-08-12",
+      "Stage": "Preparación en Almacén",
+      "AgingDays": 4,
+      "IsBottleneck": true,
+      "BottleneckReason": "Retraso en Picking / Preparación de Pedido",
+      "Items": [
+        {
+          "ItemCode": "A00003",
+          "Qty": 10
+        }
+      ],
+      "Warehouse": "02 - Secundario"
+    },
+    {
+      "DocNum": 3003,
+      "CardCode": "C40000",
+      "CardName": "Tecnología Global Dominicana",
+      "DocTotal": 89200.0,
+      "DocDate": "2026-08-14",
+      "Stage": "Preparación en Almacén",
+      "AgingDays": 2,
+      "IsBottleneck": true,
+      "BottleneckReason": "Falta Stock de Artículo A00004 en Almacén",
+      "Items": [
+        {
+          "ItemCode": "A00004",
+          "Qty": 15
+        }
+      ],
+      "Warehouse": "01 - Principal"
+    },
+    {
+      "DocNum": 3004,
+      "CardCode": "C50000",
+      "CardName": "Grupo Financiero Hispaniola",
+      "DocTotal": 215000.0,
+      "DocDate": "2026-08-15",
+      "Stage": "Despachado / Entrega",
+      "AgingDays": 1,
+      "IsBottleneck": false,
+      "BottleneckReason": "En Tránsito / Entregando al Cliente",
+      "Items": [
+        {
+          "ItemCode": "A00002",
+          "Qty": 50
+        }
+      ],
+      "Warehouse": "01 - Principal"
+    },
+    {
+      "DocNum": 3005,
+      "CardCode": "C20000",
+      "CardName": "Empresas Dominicanas S.A.",
+      "DocTotal": 67400.0,
+      "DocDate": "2026-08-16",
+      "Stage": "Facturado",
+      "AgingDays": 0,
+      "IsBottleneck": false,
+      "BottleneckReason": "Proceso Completado y Facturado (OINV)",
+      "Items": [
+        {
+          "ItemCode": "A00005",
+          "Qty": 5
+        }
+      ],
+      "Warehouse": "02 - Secundario"
+    }
+  ]
+}

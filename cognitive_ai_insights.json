@@ -1,0 +1,73 @@
+{
+  "execution_date": "2026-08-16 11:15:24",
+  "anomalies_flagged_count": 2,
+  "stockout_risks_predicted_count": 4,
+  "ai_confidence_score": 98.4,
+  "executive_brief_nl": "🧠 EXECUTIVE COGNITIVE AI BRIEF — SAP BUSINESS ONE\n\n1. RESUMEN DE SALUD FINANCIERA:\n   - Las ventas brutas del período alcanzaron $$545,100.50 USD con una utilidad neta estimada de $$58,150.25 USD.\n   - Se detectaron 2 eventos atípicos en la facturación y libro mayor que requieren atención preventiva.\n\n2. PREDICCIÓN DE CADENA DE SUMINISTRO:\n   - El modelo de IA identificó 4 artículos con riesgo potencial de desabastecimiento en los próximos 14 días.\n   - Recomendación prioritaria: Reordenar los ítems con nivel de riesgo ALTO para evitar retrasos en entregas de ventas.\n\n3. ACCIONES SUGERIDAS POR EL AGENTE IA:\n   - Aprobar la renegociación de condiciones de pago con los principales clientes VIP.\n   - Ejecutar la automatización del flujo de compras para ítems con stock neto crítico.",
+  "financial_anomalies": [
+    {
+      "entity": "Factura de Venta (OINV)",
+      "doc_num": 10048,
+      "client": "Grupo Financiero Hispaniola",
+      "amount_usd": 215000.0,
+      "z_score": 1.77,
+      "anomaly_type": "Monto Atípico / Alto Impacto Financiero",
+      "recommendation": "Revisar condiciones de crédito de 'Grupo Financiero Hispaniola' antes de autorizar despachos adicionales."
+    },
+    {
+      "entity": "Libro Mayor Contable (OACT)",
+      "account": "112001",
+      "account_name": "Cuentas por Cobrar Clientes",
+      "balance_usd": 285100.5,
+      "z_score": 2.1,
+      "anomaly_type": "Concentración de Riesgo en Cuentas por Cobrar",
+      "recommendation": "Activar protocolo de cobranza acelerada para reducir saldo expuesto en CxC."
+    }
+  ],
+  "supply_chain_predictive_alerts": [
+    {
+      "item_code": "A00001",
+      "item_name": "Servidor Dell PowerEdge R750 Enterprise",
+      "warehouse": "01 - Principal",
+      "stock_on_hand": 18,
+      "stock_commited": 3,
+      "net_available": 15,
+      "predicted_days_to_stockout": 22,
+      "risk_level": "MEDIO",
+      "ai_action": "Generar Órden de Compra (OPOR) sugerida por 5 unidades para reabastecimiento."
+    },
+    {
+      "item_code": "A00003",
+      "item_name": "Switch Cisco Catalyst 9300 48-Port",
+      "warehouse": "02 - Secundario",
+      "stock_on_hand": 32,
+      "stock_commited": 8,
+      "net_available": 24,
+      "predicted_days_to_stockout": 36,
+      "risk_level": "MEDIO",
+      "ai_action": "Generar Órden de Compra (OPOR) sugerida por 10 unidades para reabastecimiento."
+    },
+    {
+      "item_code": "A00004",
+      "item_name": "Almacenamiento SAN NetApp FAS2750",
+      "warehouse": "01 - Principal",
+      "stock_on_hand": 6,
+      "stock_commited": 1,
+      "net_available": 5,
+      "predicted_days_to_stockout": 7,
+      "risk_level": "ALTO",
+      "ai_action": "Generar Órden de Compra (OPOR) sugerida por 2 unidades para reabastecimiento."
+    },
+    {
+      "item_code": "A00005",
+      "item_name": "UPS APC Smart-UPS RT 10000VA",
+      "warehouse": "02 - Secundario",
+      "stock_on_hand": 12,
+      "stock_commited": 2,
+      "net_available": 10,
+      "predicted_days_to_stockout": 15,
+      "risk_level": "MEDIO",
+      "ai_action": "Generar Órden de Compra (OPOR) sugerida por 4 unidades para reabastecimiento."
+    }
+  ]
+}

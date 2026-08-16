@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "execution_date": "2026-08-16 11:15:17",
+    "total_opportunities_evaluated": 2,
+    "converted_to_sales_orders": 1,
+    "logistics_tasks_dispatched": 1,
+    "conversion_probability_threshold": 80.0
+  },
+  "converted_orders": [
+    {
+      "timestamp": "2026-08-16 11:15:17",
+      "opp_id": 801,
+      "opportunity_name": "Renovación Servidores 2026",
+      "client_name": "Empresas Dominicanas S.A.",
+      "amount_usd": 95000.0,
+      "probability_prcnt": 90.0,
+      "converted_to_order": true,
+      "sales_order_num": 3801,
+      "inventory_check": "Stock Disponible Verificado (Almacén 01)",
+      "assigned_logistics_agent": "Roberto Sánchez (Agente Logística Zona Norte)",
+      "detail": "Oportunidad ganada (90.0% prob). Convertida a Pedido ORDR #3801. Stock Disponible Verificado (Almacén 01). Asignado a Roberto Sánchez (Agente Logística Zona Norte)."
+    },
+    {
+      "timestamp": "2026-08-16 11:15:17",
+      "opp_id": 802,
+      "opportunity_name": "Licenciamiento SAP Cloud Enterprise",
+      "client_name": "Distribuidora Caribe SRL",
+      "amount_usd": 45000.0,
+      "probability_prcnt": 75.0,
+      "converted_to_order": false,
+      "sales_order_num": null,
+      "inventory_check": "N/A",
+      "assigned_logistics_agent": null,
+      "detail": "Probabilidad (75.0%) < Umbral (80.0%). Mantenido en etapa Propuesta."
+    }
+  ]
+}

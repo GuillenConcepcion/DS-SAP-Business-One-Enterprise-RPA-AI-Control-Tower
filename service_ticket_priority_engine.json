@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "evaluation_date": "2026-08-16 11:15:22",
+    "total_tickets_evaluated": 3,
+    "critical_priority_assigned": 2,
+    "high_priority_assigned": 0,
+    "medium_priority_assigned": 1
+  },
+  "ticket_decisions": [
+    {
+      "timestamp": "2026-08-16 11:15:22",
+      "service_call_id": 9001,
+      "client_name": "Grupo Financiero Hispaniola",
+      "subject": "Caída de Almacenamiento Principal SAN",
+      "contract_type": "Platinum 24/7",
+      "criticality": "Alta",
+      "assigned_priority": "CRÍTICA",
+      "sla_target": "Respuesta Inmediata (SLA 2 Horas)",
+      "sla_response_hours": 2,
+      "decision_reason": "Contrato Platinum 24/7 o criticidad Alta. Asignación inmediata a Soporte Nivel 3."
+    },
+    {
+      "timestamp": "2026-08-16 11:15:22",
+      "service_call_id": 9002,
+      "client_name": "Tecnología Global Dominicana",
+      "subject": "Consulta Configuración Switch Cisco",
+      "contract_type": "Standard",
+      "criticality": "Media",
+      "assigned_priority": "MEDIA",
+      "sla_target": "Respuesta Estándar (SLA 24 Horas)",
+      "sla_response_hours": 24,
+      "decision_reason": "Contrato Standard y criticidad Media. Asignación a Mesa de Ayuda Nivel 1."
+    },
+    {
+      "timestamp": "2026-08-16 11:15:22",
+      "service_call_id": 9003,
+      "client_name": "Empresas Dominicanas S.A.",
+      "subject": "Fallo en Fuente de Poder UPS",
+      "contract_type": "Gold 8x5",
+      "criticality": "Alta",
+      "assigned_priority": "CRÍTICA",
+      "sla_target": "Respuesta Inmediata (SLA 2 Horas)",
+      "sla_response_hours": 2,
+      "decision_reason": "Contrato Gold 8x5 o criticidad Alta. Asignación inmediata a Soporte Nivel 3."
+    }
+  ]
+}

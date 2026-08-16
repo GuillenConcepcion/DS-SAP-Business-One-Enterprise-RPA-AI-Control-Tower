@@ -1,0 +1,219 @@
+{
+  "info": {
+    "_postman_id": "a879f902-8f12-4273-9021-9988112b1122",
+    "name": "SAP Business One Enterprise RPA & AI Suite API",
+    "description": "Colección de peticiones REST API para la Service Layer de SAP Business One y el Dashboard Control Tower RPA.\n\nLead MLOps Engineer: Guillén Concepción (guillenconcepcion@gmail.com)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Authentication (Login)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"CompanyDB\": \"{{CompanyDB}}\",\n  \"UserName\": \"{{UserName}}\",\n  \"Password\": \"{{Password}}\"\n}"
+        },
+        "url": {
+          "raw": "{{sap_url}}/b1s/v1/Login",
+          "host": [
+            "{{sap_url}}"
+          ],
+          "path": [
+            "b1s",
+            "v1",
+            "Login"
+          ]
+        },
+        "description": "Autenticación en SAP B1 Service Layer y obtención de Cookie B1SESSION."
+      },
+      "response": []
+    },
+    {
+      "name": "2. Sales Invoices (OINV)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "B1SESSION={{B1SESSION}}"
+          }
+        ],
+        "url": {
+          "raw": "{{sap_url}}/b1s/v1/Invoices?$select=DocNum,CardName,DocTotal,DocDate&$top=10",
+          "host": [
+            "{{sap_url}}"
+          ],
+          "path": [
+            "b1s",
+            "v1",
+            "Invoices"
+          ],
+          "query": [
+            {
+              "key": "$select",
+              "value": "DocNum,CardName,DocTotal,DocDate"
+            },
+            {
+              "key": "$top",
+              "value": "10"
+            }
+          ]
+        },
+        "description": "Obtener facturas de clientes en SAP Business One."
+      },
+      "response": []
+    },
+    {
+      "name": "3. Item Master Data (OITM)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "B1SESSION={{B1SESSION}}"
+          }
+        ],
+        "url": {
+          "raw": "{{sap_url}}/b1s/v1/Items?$select=ItemCode,ItemName,QuantityOnStock,ItemPrices&$top=10",
+          "host": [
+            "{{sap_url}}"
+          ],
+          "path": [
+            "b1s",
+            "v1",
+            "Items"
+          ],
+          "query": [
+            {
+              "key": "$select",
+              "value": "ItemCode,ItemName,QuantityOnStock,ItemPrices"
+            },
+            {
+              "key": "$top",
+              "value": "10"
+            }
+          ]
+        },
+        "description": "Obtener maestro de artículos e inventario en SAP B1."
+      },
+      "response": []
+    },
+    {
+      "name": "4. Purchase Orders (OPOR)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "B1SESSION={{B1SESSION}}"
+          }
+        ],
+        "url": {
+          "raw": "{{sap_url}}/b1s/v1/PurchaseOrders?$select=DocNum,CardName,DocTotal,DocStatus&$top=5",
+          "host": [
+            "{{sap_url}}"
+          ],
+          "path": [
+            "b1s",
+            "v1",
+            "PurchaseOrders"
+          ],
+          "query": [
+            {
+              "key": "$select",
+              "value": "DocNum,CardName,DocTotal,DocStatus"
+            },
+            {
+              "key": "$top",
+              "value": "5"
+            }
+          ]
+        },
+        "description": "Obtener órdenes de compra para el workflow de aprobación OPOR."
+      },
+      "response": []
+    },
+    {
+      "name": "5. Service Tickets (OSCL)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "B1SESSION={{B1SESSION}}"
+          }
+        ],
+        "url": {
+          "raw": "{{sap_url}}/b1s/v1/ServiceTickets?$select=ServiceCallID,CustomerCode,Subject,Priority&$top=5",
+          "host": [
+            "{{sap_url}}"
+          ],
+          "path": [
+            "b1s",
+            "v1",
+            "ServiceTickets"
+          ],
+          "query": [
+            {
+              "key": "$select",
+              "value": "ServiceCallID,CustomerCode,Subject,Priority"
+            },
+            {
+              "key": "$top",
+              "value": "5"
+            }
+          ]
+        },
+        "description": "Obtener llamadas de servicio al cliente para el motor de priorización SLA."
+      },
+      "response": []
+    },
+    {
+      "name": "6. RPA Control Tower - Audit Logs Endpoint",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8050/audit_log_item_update.json",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8050",
+          "path": [
+            "audit_log_item_update.json"
+          ]
+        },
+        "description": "Endpoint REST del servidor web local para inspección de logs de auditoría de ingesta."
+      },
+      "response": []
+    },
+    {
+      "name": "7. RPA Control Tower - Cognitive AI Insights",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8050/cognitive_ai_insights.json",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8050",
+          "path": [
+            "cognitive_ai_insights.json"
+          ]
+        },
+        "description": "Endpoint REST del servidor web local para obtener la inferencia del Agente Cognitivo de IA."
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  sap_rpa_dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sap_b1_rpa_control_tower
+    ports:
+      - "8050:8050"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - SAP_HOST=sap-server
+      - SAP_PORT=50000
+      - SAP_DB=SBODEMO_ES
+    restart: always
+
+  sap_rpa_executor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sap_b1_rpa_runner
+    command: ["python", "main_rpa_suite.py", "--all"]
+    environment:
+      - PYTHONUNBUFFERED=1
+      - SAP_HOST=sap-server
+      - SAP_PORT=50000
+      - SAP_DB=SBODEMO_ES
+    depends_on:
+      - sap_rpa_dashboard

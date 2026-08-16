@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "evaluation_date": "2026-08-16 11:15:19",
+    "total_customers_evaluated": 4,
+    "platinum_25pct_discounts": 2,
+    "gold_15pct_discounts": 1,
+    "standard_5pct_discounts": 1
+  },
+  "decisions": [
+    {
+      "timestamp": "2026-08-16 11:15:19",
+      "card_code": "C20000",
+      "client_name": "Empresas Dominicanas S.A.",
+      "category": "VIP Gold",
+      "historical_purchases_usd": 185000.0,
+      "applied_discount_prcnt": 15.0,
+      "decision_tier": "GOLD VIP DISCOUNT",
+      "decision_reason": "Cliente clasificado como VIP Gold o ventas acumuladas ($185,000.00) ≥ $100,000 USD. Descuento intermedio asignado."
+    },
+    {
+      "timestamp": "2026-08-16 11:15:19",
+      "card_code": "C30000",
+      "client_name": "Distribuidora Caribe SRL",
+      "category": "Standard",
+      "historical_purchases_usd": 45000.0,
+      "applied_discount_prcnt": 5.0,
+      "decision_tier": "STANDARD DISCOUNT",
+      "decision_reason": "Cliente Estándar con historial ($45,000.00) < $100,000 USD. Descuento comercial base asignado."
+    },
+    {
+      "timestamp": "2026-08-16 11:15:19",
+      "card_code": "C40000",
+      "client_name": "Tecnología Global Dominicana",
+      "category": "VIP Platinum",
+      "historical_purchases_usd": 320000.0,
+      "applied_discount_prcnt": 25.0,
+      "decision_tier": "PLATINUM VIP DISCOUNT",
+      "decision_reason": "Cliente clasificado como VIP Platinum o ventas acumuladas ($320,000.00) ≥ $300,000 USD. Descuento máximo asignado."
+    },
+    {
+      "timestamp": "2026-08-16 11:15:19",
+      "card_code": "C50000",
+      "client_name": "Grupo Financiero Hispaniola",
+      "category": "VIP Platinum",
+      "historical_purchases_usd": 610000.0,
+      "applied_discount_prcnt": 25.0,
+      "decision_tier": "PLATINUM VIP DISCOUNT",
+      "decision_reason": "Cliente clasificado como VIP Platinum o ventas acumuladas ($610,000.00) ≥ $300,000 USD. Descuento máximo asignado."
+    }
+  ]
+}
