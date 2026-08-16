@@ -72,34 +72,34 @@ La suite está estructurada en 4 pilares fundamentales de automatización e inte
 
 ```mermaid
 flowchart TD
-    subgraph Input ["📥 Fuentes de Datos & Disparadores"]
-        Excel["📄 Planillas Excel / CSV (Artículos y Precios)"]
-        Schedule["⏰ Programador Cron / Eventos SAP B1"]
+    subgraph Input ["Fuentes de Datos y Disparadores"]
+        Excel["Planillas Excel / CSV (Artículos y Precios)"]
+        Schedule["Programador Cron / Eventos SAP B1"]
     end
 
-    subgraph CoreEngine ["⚡ Suite Enterprise RPA, Workflows & IA Cognitiva (Python 3.10+)"]
-        Connector["🔌 Conector Híbrido SAP B1 (Service Layer REST / GUI Automation)"]
-        RPA_Bots["🤖 Bots de Ingesta Masiva & Informes Mensuales"]
-        Process_Workflows["🔄 Workflows de Proceso (Aprobaciones OPOR & Oportunidades)"]
-        Decision_Engines["⚡ Motores de Decisión (Descuentos VIP & Prioridad SLA)"]
-        AI_Agent["🧠 Agente Cognitivo de IA (Detección Anomalías & Predicción Stock)"]
+    subgraph CoreEngine ["Suite Enterprise RPA, Workflows e IA Cognitiva"]
+        Connector["Conector Híbrido SAP B1 (Service Layer REST / GUI)"]
+        RPA_Bots["Bots de Ingesta Masiva e Informes Mensuales"]
+        Process_Workflows["Workflows de Proceso (Aprobaciones OPOR y OOPR)"]
+        Decision_Engines["Motores de Decisión (Descuentos VIP y SLA)"]
+        AI_Agent["Agente Cognitivo de IA (Anomalías y Stockout)"]
     end
 
-    subgraph SAP ["🏢 SAP Business One ERP Engine"]
-        ServiceLayer["⚡ Service Layer REST API (HANA/SQL)"]
-        OITM["📦 Inventario & Stock (OITM / OITW)"]
-        OINV["💳 Facturación & Ventas (OINV / ORDR)"]
-        OACT["📖 Contabilidad & Libro Mayor (OACT / JDT1)"]
-        OPOR["🛍️ Compras & Proveedores (OPOR)"]
-        OSCL["🎧 Tickets de Servicio (OSCL)"]
+    subgraph SAP ["SAP Business One ERP Engine"]
+        ServiceLayer["Service Layer REST API (HANA/SQL)"]
+        OITM["Inventario y Stock (OITM / OITW)"]
+        OINV["Facturación y Ventas (OINV / ORDR)"]
+        OACT["Contabilidad y Libro Mayor (OACT / JDT1)"]
+        OPOR["Compras y Proveedores (OPOR)"]
+        OSCL["Tickets de Servicio (OSCL)"]
     end
 
-    subgraph Output ["📤 Salidas & Artefactos de Gobernanza"]
-        Dashboard["🖥️ Dashboard Web Control Tower (http://localhost:8050)"]
-        AuditLogs["📋 Logs de Auditoría JSON & Trazabilidad"]
-        ExcelReport["📊 Informe Excel Consolidado Multipestaña"]
-        HTMLEmail["📧 Correo Ejecutivo HTML Gerencial"]
-        Executives["👥 Alta Dirección & Gerencia Operativa"]
+    subgraph Output ["Salidas y Artefactos de Gobernanza"]
+        Dashboard["Dashboard Web Control Tower"]
+        AuditLogs["Logs de Auditoría JSON y Trazabilidad"]
+        ExcelReport["Informe Excel Consolidado Multipestaña"]
+        HTMLEmail["Correo Ejecutivo HTML Gerencial"]
+        Executives["Alta Dirección y Gerencia Operativa"]
     end
 
     Excel --> RPA_Bots
@@ -112,11 +112,18 @@ flowchart TD
     AI_Agent --> Connector
 
     Connector --> ServiceLayer
-    ServiceLayer --> OITM & OINV & OACT & OPOR & OSCL
+    ServiceLayer --> OITM
+    ServiceLayer --> OINV
+    ServiceLayer --> OACT
+    ServiceLayer --> OPOR
+    ServiceLayer --> OSCL
 
     Connector --> Dashboard
-    RPA_Bots --> AuditLogs & ExcelReport & HTMLEmail
-    AI_Agent --> Dashboard & HTMLEmail
+    RPA_Bots --> AuditLogs
+    RPA_Bots --> ExcelReport
+    RPA_Bots --> HTMLEmail
+    AI_Agent --> Dashboard
+    AI_Agent --> HTMLEmail
     HTMLEmail --> Executives
 ```
 
