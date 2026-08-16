@@ -1,5 +1,10 @@
 # ⚡ SAP Business One Enterprise RPA & AI Control Tower
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![SAP B1 Service Layer](https://img.shields.io/badge/SAP%20B1-Service%20Layer-0089D6.svg)](https://www.sap.com/)
+[![MLOps Podman Ready](https://img.shields.io/badge/MLOps-Podman%2FDocker-38BDF8.svg)](https://podman.io/)
+
 > **Plataforma Enterprise de Automatización Robótica de Procesos (RPA), Orquestación de Workflows Multidepartamentales, Motores de Decisión de Negocio e Inteligencia Artificial Cognitiva (Agentic AI Copilot) para SAP Business One.**
 
 ---
@@ -220,6 +225,15 @@ El proyecto incluye la colección de peticiones y variables de entorno para **Po
 - **Failover Transparente:** Sandbox de simulación RPA integrado en caso de fallos de red en la Service Layer.
 - **Auditabilidad Total:** Registro persistente en JSON/CSV de todas las ejecuciones, decisiones y recomendaciones de IA.
 - **Despliegue Contenedorizado:** Listo para producción mediante Podman / Docker o Kubernetes CronJobs.
+
+---
+
+## 📜 Licencia
+
+Este proyecto está bajo la Licencia **MIT** — consulte el archivo [`LICENSE`](LICENSE) para obtener más información.
+
+Copyright (c) 2026 **Guillén Concepción**
+
 
 ---
 ## 👨‍💻 Perfil del Autor y MLOps Lead
